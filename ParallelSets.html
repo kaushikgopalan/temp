@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://www.jasondavies.com/parallel-sets/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<title>Parallel Sets</title>
+<style>
+@import url('/ParallelSets/d3.css');
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  width: 960px;
+  margin: 1em auto;
+  position: relative;
+}
+h1, h2, .dimension text {
+  text-align: center;
+  font-family: "PT Sans", Helvetica;
+  font-weight: 300;
+}
+h1 {
+  font-size: 4em;
+  margin: .5em 0 0 0;
+}
+h2 {
+  font-size: 2em;
+  margin: 1em 0 0.5em;
+  border-bottom: solid #ccc 1px;
+}
+p.meta, p.footer {
+  font-size: 13px;
+  color: #333;
+}
+p.meta {
+  text-align: center;
+}
+
+text.icicle { pointer-events: none; }
+
+.options { font-size: 12px; text-align: center; padding: 5px 0; }
+.curves { float: left; }
+.source { float: right; }
+pre, code { font-family: "Menlo", monospace; }
+
+.html .value,
+.javascript .string,
+.javascript .regexp {
+  color: #756bb1;
+}
+
+.html .tag,
+.css .tag,
+.javascript .keyword {
+  color: #3182bd;
+}
+
+.comment {
+  color: #636363;
+}
+
+.html .doctype,
+.javascript .number {
+  color: #31a354;
+}
+
+.html .attribute,
+.css .attribute,
+.javascript .class,
+.javascript .special {
+  color: #e6550d;
+}
+</style>
+
+</head><body>
+<h1>Parallel Sets</h1>
+<p class="meta">A visualisation technique for multidimensional categorical data.
+
+</p><h2>Titanic Survivors</h2>
+<div id="vis">
+<noscript>&lt;img src="parsets.png"&gt;</noscript><svg width="960" height="600"><g class="ribbon"><path class="category-1" d="M906.1880963198546,45L906.1880963198546,229.33333333333334h53.811903680145384L960,45Z"></path><path class="category-1" d="M913.4484325306679,229.33333333333334L913.4484325306679,413.6666666666667h46.55156746933212L960,229.33333333333334Z"></path><path class="category-1" d="M920.7087687414809,413.6666666666667L537.3587763137966,598h38.00999545661063L958.7187641980915,413.6666666666667Z"></path><path class="category-1" d="M156.73784643343936,229.33333333333334L24.343480236256248,413.6666666666667h14.947751022262606L171.68559745570195,229.33333333333334Z"></path><path class="category-1" d="M24.343480236256248,413.6666666666667L349.87127063456,598h14.947751022262606L39.291231258518856,413.6666666666667Z"></path><path class="category-0" d="M0,229.33333333333334L0,413.6666666666667h12.385279418446162L12.385279418446162,229.33333333333334Z"></path><path class="category-1" d="M39.291231258518856,413.6666666666667L530.0984401029834,598h7.260336210813266L46.55156746933212,413.6666666666667Z"></path><path class="category-1" d="M906.1880963198546,229.33333333333334L39.291231258518856,413.6666666666667h7.260336210813266L913.4484325306679,229.33333333333334Z"></path><path class="category-0" d="M18.364379827351204,413.6666666666667L311.4341965773133,598h5.979100408905043L24.343480236256248,413.6666666666667Z"></path><path class="category-0" d="M6.833257610177192,413.6666666666667L273.85127972133876,598h5.552021808268969L12.38527941844616,413.6666666666667Z"></path><path class="category-1" d="M913.4484325306677,413.6666666666667L116.16537937301226,598h5.552021808268969L919.0004543389366,413.6666666666667Z"></path><path class="category-0" d="M0,413.6666666666667L0,598h4.69786460699682L4.69786460699682,413.6666666666667Z"></path><path class="category-0" d="M4.69786460699682,413.6666666666667L128.3840678479479,598h2.1353930031803725L6.833257610177192,413.6666666666667Z"></path><path class="category-1" d="M919.0004543389366,413.6666666666667L265.4762986521278,598h1.708314402544298L920.7087687414809,413.6666666666667Z"></path><path class="category-1" d="M958.7187641980915,413.6666666666667L958.7187641980918,598h1.2812358019082235L959.9999999999998,413.6666666666667Z"></path><path class="category-0" d="M17.937301226715128,413.6666666666667L154.8629410873845,598h0.4270786006360745L18.364379827351204,413.6666666666667Z"></path><path class="category-0" d="M771.231258518855,229.33333333333334L210.9041344843253,413.6666666666667h134.95683780099955L906.1880963198546,229.33333333333334Z"></path><path class="category-0" d="M245.07042253521126,413.6666666666667L155.2900196880206,598h59.791004089050425L304.8614266242617,413.6666666666667Z"></path><path class="category-0" d="M210.9041344843253,413.6666666666667L16.228986824170832,598h34.16628805088596L245.07042253521126,413.6666666666667Z"></path><path class="category-0" d="M304.8614266242617,413.6666666666667L317.41329698621837,598h32.457973648341664L337.3194002726034,413.6666666666667Z"></path><path class="category-0" d="M337.3194002726034,413.6666666666667L664.0345297592004,598h8.54157201272149L345.86097228532486,413.6666666666667Z"></path><path class="category-1" d="M323.65288505224896,45L156.73784643343933,229.33333333333334h582.5352112676056L906.1880963198546,45Z"></path><path class="category-1" d="M171.68559745570195,229.33333333333334L345.8609722853248,413.6666666666667h567.5874602453431L739.273057701045,229.33333333333334Z"></path><path class="category-1" d="M627.3057701044978,413.6666666666667L672.5761017719218,598h286.1426624261699L913.4484325306678,413.6666666666667Z"></path><path class="category-1" d="M462.02635165833703,413.6666666666667L364.81902165682266,598h165.27941844616083L627.3057701044979,413.6666666666667Z"></path><path class="category-1" d="M345.8609722853248,413.6666666666667L50.39527487505679,598h65.77010449795547L411.63107678328026,413.6666666666667Z"></path><path class="category-1" d="M411.63107678328026,413.6666666666667L215.08102377707104,598h50.39527487505679L462.02635165833703,413.6666666666667Z"></path><path class="category-0" d="M128.905043162199,413.6666666666667L582.035438437074,598h81.9990913221263L210.9041344843253,413.6666666666667Z"></path><path class="category-0" d="M96.87414811449341,413.6666666666667L279.40330152960775,598h32.03089504770559L128.905043162199,413.6666666666667Z"></path><path class="category-0" d="M72.53066787823717,413.6666666666667L130.5194608511283,598h24.343480236256244L96.87414811449341,413.6666666666667Z"></path><path class="category-0" d="M156.73784643343933,45L759.273057701045,229.33333333333334h146.91503861880963L303.65288505224896,45Z"></path><path class="category-0" d="M759.273057701045,229.33333333333334L12.385279418446162,413.6666666666667h11.958200817810086L771.231258518855,229.33333333333334Z"></path><path class="category-0" d="M12.38527941844616,413.6666666666667L10.676965015901864,598h5.552021808268969L17.937301226715128,413.6666666666667Z"></path><path class="category-0" d="M0,45L0,229.33333333333334h156.73784643343933L156.73784643343933,45Z"></path><path class="category-0" d="M12.385279418446162,229.33333333333334L66.55156746933213,413.6666666666667h144.35256701499318L156.73784643343936,229.33333333333334Z"></path><path class="category-0" d="M66.55156746933213,413.6666666666667L4.69786460699682,598h5.979100408905043L72.53066787823717,413.6666666666667Z"></path></g><g class="ribbon-mouse"><path d="M323.65288505224896,45L156.73784643343933,229.33333333333334h582.5352112676056L906.1880963198546,45Z"></path><path d="M171.68559745570195,229.33333333333334L345.8609722853248,413.6666666666667h567.5874602453431L739.273057701045,229.33333333333334Z"></path><path d="M627.3057701044978,413.6666666666667L672.5761017719218,598h286.1426624261699L913.4484325306678,413.6666666666667Z"></path><path d="M462.02635165833703,413.6666666666667L364.81902165682266,598h165.27941844616083L627.3057701044979,413.6666666666667Z"></path><path d="M0,45L0,229.33333333333334h156.73784643343933L156.73784643343933,45Z"></path><path d="M156.73784643343933,45L759.273057701045,229.33333333333334h146.91503861880963L303.65288505224896,45Z"></path><path d="M12.385279418446162,229.33333333333334L66.55156746933213,413.6666666666667h144.35256701499318L156.73784643343936,229.33333333333334Z"></path><path d="M771.231258518855,229.33333333333334L210.9041344843253,413.6666666666667h134.95683780099955L906.1880963198546,229.33333333333334Z"></path><path d="M128.905043162199,413.6666666666667L582.035438437074,598h81.9990913221263L210.9041344843253,413.6666666666667Z"></path><path d="M345.8609722853248,413.6666666666667L50.39527487505679,598h65.77010449795547L411.63107678328026,413.6666666666667Z"></path><path d="M245.07042253521126,413.6666666666667L155.2900196880206,598h59.791004089050425L304.8614266242617,413.6666666666667Z"></path><path d="M906.1880963198546,45L906.1880963198546,229.33333333333334h53.811903680145384L960,45Z"></path><path d="M411.63107678328026,413.6666666666667L215.08102377707104,598h50.39527487505679L462.02635165833703,413.6666666666667Z"></path><path d="M913.4484325306679,229.33333333333334L913.4484325306679,413.6666666666667h46.55156746933212L960,229.33333333333334Z"></path><path d="M920.7087687414809,413.6666666666667L537.3587763137966,598h38.00999545661063L958.7187641980915,413.6666666666667Z"></path><path d="M210.9041344843253,413.6666666666667L16.228986824170832,598h34.16628805088596L245.07042253521126,413.6666666666667Z"></path><path d="M304.8614266242617,413.6666666666667L317.41329698621837,598h32.457973648341664L337.3194002726034,413.6666666666667Z"></path><path d="M96.87414811449341,413.6666666666667L279.40330152960775,598h32.03089504770559L128.905043162199,413.6666666666667Z"></path><path d="M72.53066787823717,413.6666666666667L130.5194608511283,598h24.343480236256244L96.87414811449341,413.6666666666667Z"></path><path d="M156.73784643343936,229.33333333333334L24.343480236256248,413.6666666666667h14.947751022262606L171.68559745570195,229.33333333333334Z"></path><path d="M24.343480236256248,413.6666666666667L349.87127063456,598h14.947751022262606L39.291231258518856,413.6666666666667Z"></path><path d="M0,229.33333333333334L0,413.6666666666667h12.385279418446162L12.385279418446162,229.33333333333334Z"></path><path d="M759.273057701045,229.33333333333334L12.385279418446162,413.6666666666667h11.958200817810086L771.231258518855,229.33333333333334Z"></path><path d="M337.3194002726034,413.6666666666667L664.0345297592004,598h8.54157201272149L345.86097228532486,413.6666666666667Z"></path><path d="M39.291231258518856,413.6666666666667L530.0984401029834,598h7.260336210813266L46.55156746933212,413.6666666666667Z"></path><path d="M906.1880963198546,229.33333333333334L39.291231258518856,413.6666666666667h7.260336210813266L913.4484325306679,229.33333333333334Z"></path><path d="M18.364379827351204,413.6666666666667L311.4341965773133,598h5.979100408905043L24.343480236256248,413.6666666666667Z"></path><path d="M66.55156746933213,413.6666666666667L4.69786460699682,598h5.979100408905043L72.53066787823717,413.6666666666667Z"></path><path d="M6.833257610177192,413.6666666666667L273.85127972133876,598h5.552021808268969L12.38527941844616,413.6666666666667Z"></path><path d="M12.38527941844616,413.6666666666667L10.676965015901864,598h5.552021808268969L17.937301226715128,413.6666666666667Z"></path><path d="M913.4484325306677,413.6666666666667L116.16537937301226,598h5.552021808268969L919.0004543389366,413.6666666666667Z"></path><path d="M0,413.6666666666667L0,598h4.69786460699682L4.69786460699682,413.6666666666667Z"></path><path d="M4.69786460699682,413.6666666666667L128.3840678479479,598h2.1353930031803725L6.833257610177192,413.6666666666667Z"></path><path d="M919.0004543389366,413.6666666666667L265.4762986521278,598h1.708314402544298L920.7087687414809,413.6666666666667Z"></path><path d="M958.7187641980915,413.6666666666667L958.7187641980918,598h1.2812358019082235L959.9999999999998,413.6666666666667Z"></path><path d="M17.937301226715128,413.6666666666667L154.8629410873845,598h0.4270786006360745L18.364379827351204,413.6666666666667Z"></path></g><g class="dimension" transform="translate(0,45)"><rect width="960" y="-45" height="45" style="opacity: 1;"></rect><text class="dimension" transform="translate(0,-25)"><tspan class="name">Survived</tspan><tspan class="sort alpha" dx="2em">alpha »</tspan><tspan class="sort size" dx="2em">size »</tspan></text><g class="category" transform="translate(0)" style="opacity: 1;"><rect width="303.65288505224896" y="-20" height="20" class="category-0" style="opacity: 1;"></rect><line x2="303.65288505224896" style="stroke-width: 2px;"></line><text dy="-.3em">Survived</text></g><g class="category" transform="translate(323.65288505224896)" style="opacity: 1;"><rect width="636.347114947751" y="-20" height="20" class="category-1" style="opacity: 1;"></rect><line x2="636.347114947751" style="stroke-width: 2px;"></line><text dy="-.3em">Perished</text></g></g><g class="dimension" transform="translate(0,229.3333282470703)"><rect width="960" y="-45" height="45" style="opacity: 1;"></rect><text class="dimension" transform="translate(0,-25)"><tspan class="name">Sex</tspan><tspan class="sort alpha" dx="2em">« alpha</tspan><tspan class="sort size" dx="2em">« size</tspan></text><g class="category" transform="translate(759.2730712890625,0)" style="opacity: 1;"><rect width="200.726942298955" y="-20" height="20" class="category-background" style="opacity: 1;"></rect><line x2="200.726942298955" style="stroke-width: 2px;"></line><text dy="-.3em">Female</text></g><g class="category" transform="" style="opacity: 1;"><rect width="739.273057701045" y="-20" height="20" class="category-background" style="opacity: 1;"></rect><line x2="739.273057701045" style="stroke-width: 2px;"></line><text dy="-.3em">Male</text></g></g><g class="dimension" transform="translate(0,413.6666666666667)"><rect width="960" y="-45" height="45" style="opacity: 1;"></rect><text class="dimension" transform="translate(0,-25)"><tspan class="name">Age</tspan><tspan class="sort alpha" dx="2em">alpha »</tspan><tspan class="sort size" dx="2em">size »</tspan></text><g class="category" transform="translate(0)" style="opacity: 1;"><rect width="46.55156746933212" y="-20" height="20" class="category-background" style="opacity: 1;"></rect><line x2="46.55156746933212" style="stroke-width: 2px;"></line><text dy="-.3em">Child</text></g><g class="category" transform="translate(66.55156746933213)" style="opacity: 1;"><rect width="893.4484325306679" y="-20" height="20" class="category-background" style="opacity: 1;"></rect><line x2="893.4484325306679" style="stroke-width: 2px;"></line><text dy="-.3em">Adult</text></g></g><g class="dimension" transform="translate(0,598)"><rect width="960" y="-45" height="45" style="opacity: 1;"></rect><text class="dimension" transform="translate(0,-25)"><tspan class="name">Class</tspan><tspan class="sort alpha" dx="2em">alpha »</tspan><tspan class="sort size" dx="2em">size »</tspan></text><g class="category" transform="translate(0)" style="opacity: 1;"><rect width="121.71740118128125" y="-20" height="20" class="category-background" style="opacity: 1;"></rect><line x2="121.71740118128125" style="stroke-width: 2px;"></line><text dy="-.3em">Second Class</text></g><g class="category" transform="translate(128.3840678479479)" style="opacity: 1;"><rect width="138.80054520672422" y="-20" height="20" class="category-background" style="opacity: 1;"></rect><line x2="138.80054520672422" style="stroke-width: 2px;"></line><text dy="-.3em">First Class</text></g><g class="category" transform="translate(273.85127972133876)" style="opacity: 1;"><rect width="301.5174920490686" y="-20" height="20" class="category-background" style="opacity: 1;"></rect><line x2="301.5174920490686" style="stroke-width: 2px;"></line><text dy="-.3em">Third Class</text></g><g class="category" transform="translate(582.035438437074)" style="opacity: 1;"><rect width="377.96456156292595" y="-20" height="20" class="category-background" style="opacity: 1;"></rect><line x2="377.96456156292595" style="stroke-width: 2px;"></line><text dy="-.3em">Crew</text></g></g><g class="ribbon"></g><g class="ribbon-mouse"></g></svg>
+</div>
+<div class="options">
+  <span class="source">Data: <a href="http://www.amstat.org/publications/jse/v3n3/datasets.dawson.html">Robert J. MacG. Dawson</a>.</span>
+  <span class="curves"><label for="curved"><input type="checkbox" id="curved" onchange="curves.call(this)"> Curves?</label></span>
+</div>
+
+<h2>Explanation</h2>
+<p>For each dimension (Survived, Sex, Age and Class), a horizontal bar is shown for each of its possible categories.  The width of the bar denotes the absolute number of matches for that category.
+</p><p>Starting with the first dimension (Survived), each of its categories is connected to a number of categories in the next dimension, showing how that category is subdivided. This subdividing is repeated recursively, producing a tree of “ribbons”.
+</p><p>In fact, you can imagine Parallel Sets as being an icicle plot, with icicles of the same category being “bundled” together.
+</p><p style="text-align: center"><label for="icicle" style="font-style: italic"><input type="checkbox" id="icicle"> Show icicle plot!</label>
+</p><p>Drag the dimensions and categories to reorder them. You can also click the “alpha” or “size” links that appear next to the dimension name on mouseover, to order the categories by name or frequency.
+
+</p><h2>Women and Children First?</h2>
+
+<p>We can see at a glance that the relative proportion of surviving women is far greater than that of the men.
+</p><p>As for children, it becomes clearer when we drag the <em>Age</em> dimension up: around half the children survived.  This is proportionally less than the women but more than the men.  Can you spot anything else interesting?
+
+</p><h2>Do It Yourself</h2>
+<p>The code is available as a reusable <a href="http://d3js.org/">D3.js</a> chart: <a href="http://github.com/jasondavies/d3-parsets">d3.parsets</a>.  This is a configurable function, which can be called on a D3 selection to produce an interactive SVG visualisation.
+</p><p>The input data should be bound to the target selection.  For input, you can either use an array of aggregated objects (pivot table) along with a <a href="http://github.com/jasondavies/d3-parsets#parsets_value">value</a> accessor, or you can simply use the full dataset and the grouped frequencies will be calculated automatically by default.
+
+</p><pre><code class="javascript"><span class="keyword">var</span> chart = d3.parsets()
+      .dimensions([<span class="string">"Survived"</span>, <span class="string">"Sex"</span>, <span class="string">"Age"</span>, <span class="string">"Class"</span>]);
+
+<span class="keyword">var</span> vis = d3.select(<span class="string">"#vis"</span>).append(<span class="string">"svg"</span>)
+    .attr(<span class="string">"width"</span>, chart.width())
+    .attr(<span class="string">"height"</span>, chart.height());
+
+d3.csv(<span class="string">"data.csv"</span>, <span class="function"><span class="keyword">function</span><span class="params">(error, csv)</span> {</span>
+  vis.datum(csv).call(chart);
+});</code></pre>
+
+
+<h2>Alternatives</h2>
+<p>For multivariate categorical data, the <a href="http://www.theusrus.de/blog/understanding-mosaic-plots/">mosaic plot</a> (or Marimekko chart) is a powerful alternative.  Personally, I think it’s easier to see the order in which the subsets were derived in a parallel sets visualisation.  On the other hand, it seems easier to spot small disparities in a mosaic plot because the subsets are laid out side-by-side.  Here is a <a href="http://bl.ocks.org/1005090">Marimekko chart</a> in D3.js by <a href="http://bost.ocks.org/mike/">Mike Bostock</a>.
+</p><p>For multivariate ordinal data (such as numeric data), <a href="http://en.wikipedia.org/wiki/Parallel_coordinates">parallel coordinates</a> are more appropriate, although you can often generate meaningful categories from such data for use with parallel sets.
+
+</p><h2>Implementation Notes</h2>
+
+<p>Probably the most interesting part of implementing this was supporting multiple concurrent transitions on the ribbons.  Strictly speaking this wasn’t necessary as it’s unlikely anyone would drag two things within the transition duration.  But who would pass up an opportunity to use a <a href="http://github.com/mbostock/d3/wiki/Transitions#wiki-tween">custom tween</a>?
+
+</p><p>This allows the <em>x-</em> and <em>y-</em> components of the ribbons to be animated independently, so that you can drag a dimension vertically even though a horizontal category animation is in progress.
+
+</p><p><label for="slow"><input type="checkbox" id="slow" onchange="vis.call(chart.duration(this.checked ? 5000 : 500))"> Go slow!</label>
+
+</p><p>In case you missed it, be sure to click on “icicle plots” in the Explanation section to see the animated transition.
+
+</p><p><a href="http://news.ycombinator.com/item?id=3878877">Discuss on HN!</a>
+
+</p><h2>Further Reading</h2>
+<ul>
+  <li>Functionality based on <a href="http://eagereyes.org/parallel-sets">Parallel Sets</a> by <a href="http://coitweb.uncc.edu/~rkosara/">Robert Kosara</a> and <a href="http://www.cs.brown.edu/people/cziemki/">Caroline Ziemkiewicz</a>.
+  </li><li><a href="http://kosara.net/publications/Kosara_BeautifulVis_2010.html">Turning a Table into a Tree: Growing Parallel Sets into a Purposeful Project</a> by Robert Kosara.
+  </li><li><a href="http://kosara.net/publications/Bendix_InfoVis_2005.html">Parallel Sets: Visual Analysis of Categorical Data</a> by Fabian Bendix, Robert Kosara, Helwig Hauser.
+</li></ul>
+
+<p class="footer">Made by <a href="http://www.jasondavies.com/">Jason Davies</a>.  Thanks to <a href="http://bost.ocks.org/mike">Mike Bostock</a> for his suggestions (and of course, <a href="http://d3js.org/">D3.js</a>!)
+
+<script src="./ParallelSets_files/d3.min.js"></script>
+<script src="./ParallelSets_files/d3.parsets.js"></script>
+<script src="./ParallelSets_files/highlight.min.js"></script>
+<script>
+var chart = d3.parsets()
+    .dimensions(["Survived", "Sex", "Age", "Class"]);
+
+var vis = d3.select("#vis").append("svg")
+    .attr("width", chart.width())
+    .attr("height", chart.height());
+
+var partition = d3.layout.partition()
+    .sort(null)
+    .size([chart.width(), chart.height() * 5 / 4])
+    .children(function(d) { return d.children ? d3.values(d.children) : null; })
+    .value(function(d) { return d.count; });
+
+var ice = false;
+
+function curves() {
+  var t = vis.transition().duration(500);
+  if (ice) {
+    t.delay(1000);
+    icicle();
+  }
+  t.call(chart.tension(this.checked ? .5 : 1));
+}
+
+d3.csv("data.csv", function(error, csv) {
+  vis.datum(csv).call(chart);
+
+  window.icicle = function() {
+    var newIce = this.checked,
+        tension = chart.tension();
+    if (newIce === ice) return;
+    if (ice = newIce) {
+      var dimensions = [];
+      vis.selectAll("g.dimension")
+         .each(function(d) { dimensions.push(d); });
+      dimensions.sort(function(a, b) { return a.y - b.y; });
+      var root = d3.parsets.tree({children: {}}, csv, dimensions.map(function(d) { return d.name; }), function() { return 1; }),
+          nodes = partition(root),
+          nodesByPath = {};
+      nodes.forEach(function(d) {
+        var path = d.data.name,
+            p = d;
+        while ((p = p.parent) && p.data.name) {
+          path = p.data.name + "\0" + path;
+        }
+        if (path) nodesByPath[path] = d;
+      });
+      var data = [];
+      vis.on("mousedown.icicle", stopClick, true)
+        .select(".ribbon").selectAll("path")
+          .each(function(d) {
+            var node = nodesByPath[d.path],
+                s = d.source,
+                t = d.target;
+            s.node.x0 = t.node.x0 = 0;
+            s.x0 = t.x0 = node.x;
+            s.dx0 = s.dx;
+            t.dx0 = t.dx;
+            s.dx = t.dx = node.dx;
+            data.push(d);
+          });
+      iceTransition(vis.selectAll("path"))
+          .attr("d", function(d) {
+            var s = d.source,
+                t = d.target;
+            return ribbonPath(s, t, tension);
+          })
+          .style("stroke-opacity", 1);
+      iceTransition(vis.selectAll("text.icicle")
+          .data(data)
+        .enter().append("text")
+          .attr("class", "icicle")
+          .attr("text-anchor", "middle")
+          .attr("dy", ".3em")
+          .attr("transform", function(d) {
+            return "translate(" + [d.source.x0 + d.source.dx / 2, d.source.dimension.y0 + d.target.dimension.y0 >> 1] + ")rotate(90)";
+          })
+          .text(function(d) { return d.source.dx > 15 ? d.node.name : null; })
+          .style("opacity", 1e-6))
+          .style("opacity", 1);
+      iceTransition(vis.selectAll("g.dimension rect, g.category")
+          .style("opacity", 1))
+          .style("opacity", 1e-6)
+          .each("end", function() { d3.select(this).attr("visibility", "hidden"); });
+      iceTransition(vis.selectAll("text.dimension"))
+          .attr("transform", "translate(0,-5)");
+      vis.selectAll("tspan.sort").style("visibility", "hidden");
+    } else {
+      vis.on("mousedown.icicle", null)
+        .select(".ribbon").selectAll("path")
+          .each(function(d) {
+            var s = d.source,
+                t = d.target;
+            s.node.x0 = s.node.x;
+            s.x0 = s.x;
+            s.dx = s.dx0;
+            t.node.x0 = t.node.x;
+            t.x0 = t.x;
+            t.dx = t.dx0;
+          });
+      iceTransition(vis.selectAll("path"))
+          .attr("d", function(d) {
+            var s = d.source,
+                t = d.target;
+            return ribbonPath(s, t, tension);
+          })
+          .style("stroke-opacity", null);
+      iceTransition(vis.selectAll("text.icicle"))
+          .style("opacity", 1e-6).remove();
+      iceTransition(vis.selectAll("g.dimension rect, g.category")
+          .attr("visibility", null)
+          .style("opacity", 1e-6))
+          .style("opacity", 1);
+      iceTransition(vis.selectAll("text.dimension"))
+          .attr("transform", "translate(0,-25)");
+      vis.selectAll("tspan.sort").style("visibility", null);
+    }
+  };
+  d3.select("#icicle")
+      .on("change", icicle)
+      .each(icicle);
+});
+
+function iceTransition(g) {
+  return g.transition().duration(1000);
+}
+
+function ribbonPath(s, t, tension) {
+  var sx = s.node.x0 + s.x0,
+      tx = t.node.x0 + t.x0,
+      sy = s.dimension.y0,
+      ty = t.dimension.y0;
+  return (tension === 1 ? [
+      "M", [sx, sy],
+      "L", [tx, ty],
+      "h", t.dx,
+      "L", [sx + s.dx, sy],
+      "Z"]
+   : ["M", [sx, sy],
+      "C", [sx, m0 = tension * sy + (1 - tension) * ty], " ",
+           [tx, m1 = tension * ty + (1 - tension) * sy], " ", [tx, ty],
+      "h", t.dx,
+      "C", [tx + t.dx, m1], " ", [sx + s.dx, m0], " ", [sx + s.dx, sy],
+      "Z"]).join("");
+}
+
+function stopClick() { d3.event.stopPropagation(); }
+
+// Given a text function and width function, truncates the text if necessary to
+// fit within the given width.
+function truncateText(text, width) {
+  return function(d, i) {
+    var t = this.textContent = text(d, i),
+        w = width(d, i);
+    if (this.getComputedTextLength() < w) return t;
+    this.textContent = "…" + t;
+    var lo = 0,
+        hi = t.length + 1,
+        x;
+    while (lo < hi) {
+      var mid = lo + hi >> 1;
+      if ((x = this.getSubStringLength(0, mid)) < w) lo = mid + 1;
+      else hi = mid;
+    }
+    return lo > 1 ? t.substr(0, lo - 2) + "…" : "";
+  };
+}
+
+d3.select("#file").on("change", function() {
+  var file = this.files[0],
+      reader = new FileReader;
+  reader.onloadend = function() {
+    var csv = d3.csv.parse(reader.result);
+    vis.datum(csv).call(chart
+        .value(csv[0].hasOwnProperty("Number") ? function(d) { return +d.Number; } : 1)
+        .dimensions(function(d) { return d3.keys(d[0]).filter(function(d) { return d !== "Number"; }).sort(); }));
+  };
+  reader.readAsText(file);
+});
+</script>
+</p><div class="parsets tooltip" style="left: 87px; top: 627px; display: none;">Survived → Male → Adult → Second Class<br>14 (1%)</div><div></div></body></html>
